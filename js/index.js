@@ -44,13 +44,36 @@ navLogo.addEventListener('dblclick', (event) => {
 });
 
 
-// When page scroll is activated, nav bar drops in opacity and return to 100% opacity when mouse enters field.
-
+// When page scroll is activated, nav bar drops in opacity and return to 100% opacity when mouse enters field. Both with ease on style transition.
 window.addEventListener('scroll', (event) => {
   headAndNav.style.opacity = '.5';
+  headAndNav.style.transition = '0.5s';
 });
 headAndNav.addEventListener('mouseenter', (event) => {
   headAndNav.style.opacity = '1';
+  headAndNav.style.transition = '0.5s';
 });
 
+// when switched to fullscreen, images are turned to grayscale
+const images = document.querySelectorAll('img');
 
+images.forEach((image) => {
+  window.addEventListener('resize', (event) => {
+    image.style.filter = 'grayscale(100%)';
+    image.style.transition = '1s';
+  });
+});
+
+//when image is dragged pagebackground turns aqua, then returns to normal when released.
+images.forEach((image) => {
+  image.addEventListener('drag', (event) => {
+    document.body.style.backgroundColor = '#17A2B8';
+    document.body.style.transition = '1s'
+  });
+});
+images.forEach((image) => {
+  image.addEventListener('dragend', (event) => {
+    document.body.style.backgroundColor = 'white';
+    document.body.style.transition = '1s'
+  });
+});
