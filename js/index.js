@@ -3,6 +3,7 @@ const signUpButtons = document.getElementsByClassName('btn');
 
 for (var i = 0 ; i < signUpButtons.length; i++) {
   signUpButtons[i].addEventListener('click', (event) => {
+    event.stopPropagation();
     window.alert(`Vacation Starts Now!!`);
   });
 }
@@ -76,4 +77,39 @@ images.forEach((image) => {
     document.body.style.backgroundColor = 'white';
     document.body.style.transition = '1s'
   });
+});
+
+//When Fun In The Sun div is right clicked div border shows up.
+let destinationDiv = document.querySelector('.destination');
+destinationDiv.style.border = 'thick solid transparent';
+
+destinationDiv.addEventListener('contextmenu', (event) => {
+  destinationDiv.style.border = 'thick solid #6A9465';
+  destinationDiv.style.transition = '1s';
+});
+destinationDiv.addEventListener('mouseleave', (event) => {
+  destinationDiv.style.border = 'thick solid transparent';
+  destinationDiv.style.transition = '1s';
+});
+
+//when paragraph text is selected console log displays a message.
+const paragraphs = document.querySelectorAll('p');
+paragraphs.forEach((para) => {
+  para.addEventListener('copy', (event) => {
+    console.log(`Text has been saved to your clipboard!`);
+  });
+});
+
+const navLinks = document.querySelectorAll('.nav-link');
+console.log(navLinks);
+
+// navLinks.addEventListener('click', (event) => {
+//   console.log(`navigation link  WAS clicked`);
+//   event.preventDefault();
+// });
+navLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+  console.log(`navigation link WAS clicked`);
+  event.preventDefault();
+});
 });
