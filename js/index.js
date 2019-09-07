@@ -92,7 +92,7 @@ destinationDiv.addEventListener('mouseleave', (event) => {
   destinationDiv.style.transition = '1s';
 });
 
-//when paragraph text is selected console log displays a message.
+//when paragraph text is copied to clipboard console log displays a message.
 const paragraphs = document.querySelectorAll('p');
 paragraphs.forEach((para) => {
   para.addEventListener('copy', (event) => {
