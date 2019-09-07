@@ -29,10 +29,14 @@ const containerHome = document.querySelector('.home');
 const footer = document.querySelector('footer');
 
 window.addEventListener('offline', (event) => {
-  console.log("AYE YO NETWORK DIED!!");
-  //document.body.style.display = 'none'; (would get rid of everything...)
-  // document.getElementsByTagName('body')[0].innerHTML = content;
-  //document.body.appendChild(pugDiv);
+  headAndNav.style.display = 'none';
+  containerHome.style.display = 'none';
+  footer.style.display = 'none';
+  document.body.appendChild(pugDiv);
+});
+//for online demo purposes, can be commented out later:
+const navLogo = document.querySelector('.logo-heading');
+navLogo.addEventListener('dblclick', (event) => {
   headAndNav.style.display = 'none';
   containerHome.style.display = 'none';
   footer.style.display = 'none';
@@ -42,5 +46,11 @@ window.addEventListener('offline', (event) => {
 
 // When page scroll is activated, nav bar drops in opacity and return to 100% opacity when mouse enters field.
 
+window.addEventListener('scroll', (event) => {
+  headAndNav.style.opacity = '.5';
+});
+headAndNav.addEventListener('mouseenter', (event) => {
+  headAndNav.style.opacity = '1';
+});
 
-//
+
