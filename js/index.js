@@ -101,12 +101,7 @@ paragraphs.forEach((para) => {
 });
 
 const navLinks = document.querySelectorAll('.nav-link');
-console.log(navLinks);
 
-// navLinks.addEventListener('click', (event) => {
-//   console.log(`navigation link  WAS clicked`);
-//   event.preventDefault();
-// });
 navLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
   console.log(`navigation link WAS clicked`);
