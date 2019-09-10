@@ -113,5 +113,5 @@ navLinks.forEach((link) => {
 
 //Animation that tweens navigation links from off screen on the x-axis on page load.
 window.addEventListener('load', (event) => {
-  TweenMax.from(navLinks, 1, {x:500, ease: Bounce.easeOut});
+  TweenMax.from(navLinks, 1, {x:800, ease: Bounce.easeOut});
 });
