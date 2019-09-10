@@ -108,5 +108,15 @@ navLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
   console.log(`${event.target.textContent} link WAS clicked`);
   event.preventDefault();
+  });
 });
-});
+
+
+// window.addEventListener('load',(event) => {
+//   navLinks.forEach((link) => {
+//   TweenMax.staggerFrom(link, 2, {x:300, stagger:0.2});
+//   });
+// })
+//*um... figure this out?
+
+//GSAP TEST
