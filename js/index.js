@@ -100,11 +100,13 @@ paragraphs.forEach((para) => {
   });
 });
 
+
+//When nav links are clicked the console displays a message about which link was clicked.
 const navLinks = document.querySelectorAll('.nav-link');
 
 navLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
-  console.log(`navigation link WAS clicked`);
+  console.log(`${event.target.textContent} link WAS clicked`);
   event.preventDefault();
 });
 });
