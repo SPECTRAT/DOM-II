@@ -111,12 +111,7 @@ navLinks.forEach((link) => {
   });
 });
 
-
-// window.addEventListener('load',(event) => {
-//   navLinks.forEach((link) => {
-//   TweenMax.staggerFrom(link, 2, {x:300, stagger:0.2});
-//   });
-// })
-//*um... figure this out?
-
-//GSAP TEST
+//Animation that tweens navigation links from off screen on the x-axis on page load.
+window.addEventListener('load', (event) => {
+  TweenMax.from(navLinks, 1, {x:500, ease: Bounce.easeOut});
+});
