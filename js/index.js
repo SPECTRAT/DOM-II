@@ -35,7 +35,7 @@ window.addEventListener('offline', (event) => {
   footer.style.display = 'none';
   document.body.appendChild(pugDiv);
 });
-//for online demo purposes, can be commented out later:
+//for online demo purposes double click Fun Bus logo for same effect as above, can be commented out later:
 const navLogo = document.querySelector('.logo-heading');
 navLogo.addEventListener('dblclick', (event) => {
   headAndNav.style.display = 'none';
